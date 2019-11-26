@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Use system defaults for devs not using AppCompat -->
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#007aff</color>
+
+
+    <color name="base_text_color_light">#909090</color>
+    <color name="colorRadiusDefaultRipple">#c8cccccc</color>
+
+
+    <color name="colorLineGray">#DCDCDC</color>
+
+    <color name="colorLoadingTextWeiBo">#f0f0f0</color>
+    <color name="colorLoadingText">#393939</color>
+    <color name="colorLoadingBg">#f5ffffff</color>
+    <color name="colorLoadingBgWei">#a5000000</color>
+    <color name="colorActionSheetWeiXinText">#393939</color>
+    <color name="colorActionSheetNormalItemText">#393939</color>
+    <color name="colorActionSheetTitleText">#969696</color>
+    <color name="colorActionSheetCancelText">#1382FF</color>
+    <color name="colorActionSheetItemText">#1382FF</color>
+    <color name="colorActionSheetEdgePressed">#F0F0F0</color>
+    <color name="colorActionSheetEdge">#FFFFFF</color>
+    <color name="colorActionSheetEdgeLineGray">#DCDCDC</color>
+    <color name="colorActionSheetNormalBackground">#e5e3e4</color>
+
+
+
+    <color name="_xpopup_list_divider">#EEEEEE</color>
+    <color name="_xpopup_title_color">#111111</color>
+    <color name="_xpopup_content_color">#333333</color>
+</resources>
