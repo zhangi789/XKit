@@ -1,4 +1,4 @@
-package com.tool.cn.title.helper.view;
+package com.tool.cn.view;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -8,17 +8,14 @@ import android.widget.EditText;
 
 import com.tool.cn.title.helper.delegate.RadiusEditTextDelegate;
 
+
 /**
- * @Author: AriesHoo on 2018/7/19 10:03
- * @E-Mail: AriesHoo@126.com
- * Function: 用于需要圆角矩形框背景的EditText的情况,减少直接使用EditText时引入的shape资源文件
- * Description:
- * 1、2018-2-5 14:27:16 初始化TextView的 RadiusTextDelegate
- * 2、2018-6-13 11:28:09 默认设置不可点击
+ * author 张海洋
+ * create on   2019/11/20 14:42
+ * description   用于需要圆角矩形框背景的EditText的情况,减少直接使用EditText时引入的shape资源文件
  */
 @SuppressLint("AppCompatCustomView")
 public class RadiusEditText extends EditText {
-
     /**
      * 是否设置完成光标标识
      */

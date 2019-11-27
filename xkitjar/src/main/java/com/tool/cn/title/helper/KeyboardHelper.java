@@ -37,7 +37,6 @@ import java.lang.ref.WeakReference;
  * 8、2019-7-22 09:19:45 移除设置contentView相关with方法
  */
 public class KeyboardHelper {
-
     private WeakReference<Activity> mActivity;
     private WeakReference<View> mContentView;
     private int mKeyMode = WindowManager.LayoutParams.SOFT_INPUT_STATE_UNSPECIFIED;

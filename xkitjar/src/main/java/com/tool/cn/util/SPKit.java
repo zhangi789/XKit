@@ -14,7 +14,6 @@ public class SPKit {
 
     public static SharedPreferences mSp;
     public static String SP_SPLASH = "config_splash";
-
     public static void putString(Context context, String key, String value) {
         if (mSp == null) {
             mSp = context.getSharedPreferences(SP_SPLASH, Context.MODE_PRIVATE);

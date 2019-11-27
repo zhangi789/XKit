@@ -16,12 +16,9 @@ import com.tool.cn.util.SPKit;
  */
 
 public class XKit {
-
-
     public static DisplayMetrics getDisplayMetrics() {
         return Resources.getSystem().getDisplayMetrics();
     }
-
 
     /**
      * 设置状态栏字体的颜色
@@ -125,8 +122,6 @@ public class XKit {
     public static boolean isNotEmpty(String result) {
         return BaseKit.isNotEmpty(result);
     }
-
-
     /**
      * SPKit  使用方式
      * SharedPreferences 使用一致

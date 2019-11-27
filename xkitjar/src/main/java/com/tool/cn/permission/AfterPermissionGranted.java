@@ -25,7 +25,6 @@ import java.lang.annotation.Target;
 
 
 public @interface AfterPermissionGranted {
-
     int value();
 
 }
