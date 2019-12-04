@@ -84,7 +84,6 @@ public class BottomListPopupView extends BottomPopupView {
                 } else {
                     holder.getView(R.id.iv_image).setVisibility(GONE);
                 }
-
                 // 对勾View
                 if (checkedPosition != -1) {
                     if(holder.getView(R.id.check_view)!=null){

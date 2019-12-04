@@ -8,15 +8,28 @@ import android.util.DisplayMetrics;
 import com.tool.cn.title.util.StatusBarUtil;
 import com.tool.cn.util.BaseKit;
 import com.tool.cn.util.SPKit;
+import com.tool.cn.util.XLog;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * author 张海洋
  * create on   2019/11/20 10:08
  * description   父类
+ * <p>
+ * 基本工具类
+ * 1：Sp 工具
+ * 2：Log
+ * 3: 状态栏工具类
+ * 4：d2p 转化工具
+ * 5：获得app 版本和版本号
  */
 
 public class XKit {
     public static DisplayMetrics getDisplayMetrics() {
+
+
         return Resources.getSystem().getDisplayMetrics();
     }
 
@@ -78,8 +91,17 @@ public class XKit {
         return (int) (pxValue / fontScale + 0.5f);
     }
 
+    /**
+     * 获得系统的当前时间  24时制
+     */
 
-    
+
+    public static String getSystemCurTime() {
+        Date day = new Date();
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return df.format(day);
+    }
+
 
     /**
      * 获得版本名称
@@ -124,6 +146,7 @@ public class XKit {
     public static boolean isNotEmpty(String result) {
         return BaseKit.isNotEmpty(result);
     }
+
     /**
      * SPKit  使用方式
      * SharedPreferences 使用一致
@@ -162,6 +185,28 @@ public class XKit {
     public static float getFloat(Context context, String key, float defValue) {
         return SPKit.getFloat(context, key, defValue);
     }
+
+
+    /**
+     * 常用打印json   和 Log.i   支持自定义debug和realse版本
+     */
+
+
+    public static void json(boolean isDebug, String tag, String jsonStr) {
+        XLog.json(isDebug, tag, jsonStr);
+    }
+
+    public static void i(boolean isDebug, String tag, Object... objects) {
+        XLog.i(isDebug, tag, objects);
+    }
+
+
+
+
+
+
+
+
 
 
 }
