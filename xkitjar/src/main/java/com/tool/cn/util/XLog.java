@@ -101,7 +101,7 @@ public class XLog {
         return new String[]{tag, msg, headString};
     }
 
-
+//
     public static void printLine(String tag, boolean isTop) {
         if (isTop) {
             Log.d(tag, "╔═══════════════════════════════════════════════════════════════════════════════════════");
