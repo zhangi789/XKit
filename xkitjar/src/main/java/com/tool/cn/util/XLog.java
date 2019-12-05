@@ -7,7 +7,7 @@ import com.tool.cn.XKit;
 /**
  * author 张海洋
  * create on   2019/12/04 13:37
- * description   TODO
+ * description   Log 打印工具
  */
 
 public class XLog {
