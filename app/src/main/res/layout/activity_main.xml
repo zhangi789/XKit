@@ -6,30 +6,4 @@
     android:layout_height="match_parent"
 
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
-
-
-
-
-    <Button
-        android:id="@+id/mBtnStart"
-        android:text="开始计时"
-        android:layout_width="match_parent"
-        android:layout_height="46dp" />
-
-
-    <Button
-        android:id="@+id/mEndStart"
-        android:layout_width="match_parent"
-        android:text="结束计时"
-        android:layout_height="46dp" />
-
-
-
-    <Button
-        android:id="@+id/mFiniStart"
-        android:layout_width="match_parent"
-        android:text="完成"
-        android:layout_height="46dp" />
-</LinearLayout>
+    tools:context=".MainActivity"></LinearLayout>

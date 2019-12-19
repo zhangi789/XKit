@@ -9,7 +9,6 @@ import android.os.SystemClock;
  * create on   2019/12/04 16:30
  * description  主要用于倒计时    在原基础的加上取消
  */
-
 public abstract class XCountDownTimer {
     /**
      * Millis since epoch when alarm should stop.
@@ -75,7 +74,6 @@ public abstract class XCountDownTimer {
      * Callback fired when the time is up.
      */
     public abstract void onFinish();
-
 
     /**
      * 取消的时候使用

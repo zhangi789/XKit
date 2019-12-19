@@ -55,9 +55,18 @@ public class XKit {
      * @param activity
      */
     public static void setFullScreen(Activity activity) {
-        StatusBarUtil.setFullScreen(activity);
+        StatusBarUtil.setFullScreenWithSplash(activity);
     }
 
+    /**
+     * 获得状态栏高度
+     *
+     * @return
+     */
+    public static int getStatusHeight() {
+        return StatusBarUtil.getStatusBarHeight();
+
+    }
 
     /**
      * 将dp值转换为px值
@@ -112,7 +121,6 @@ public class XKit {
     public static String getAppVersionName(Context context) {
         return BaseKit.getAppVersionName(context);
     }
-
 
 
     /**
@@ -200,16 +208,6 @@ public class XKit {
     public static void i(boolean isDebug, String tag, Object... objects) {
         XLog.i(isDebug, tag, objects);
     }
-
-
-
-
-
-
-
-
-
-
 
 
 }
