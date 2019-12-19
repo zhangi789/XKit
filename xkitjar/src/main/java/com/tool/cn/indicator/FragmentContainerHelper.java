@@ -23,6 +23,8 @@ import java.util.List;
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class FragmentContainerHelper {
 
+
+    
     private List<MagicIndicator> mMagicIndicators = new ArrayList<MagicIndicator>();
     private ValueAnimator mScrollAnimator;
     private int mLastSelectedIndex;
