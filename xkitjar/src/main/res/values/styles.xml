@@ -44,13 +44,40 @@
         <item name="android:windowExitAnimation">@anim/push_up_out</item>
     </style>
 
-
-
-
     <style name="XPopupTitle">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/_xpopup_title_color</item>
         <item name="android:lines">1</item>
         <item name="android:ellipsize">end</item>
     </style>
+
+
+    <!--TabLayout 格式   app:tabGravity -->
+    <style name="TabIndicatorRoundRectGreen">
+        <!-- <item name="android:layout_width">wrap_content</item>
+         <item name="android:layout_height">34dp</item>
+         <item name="android:textSize">12sp</item>-->
+        <item name="tabIndicator">@drawable/tab_indicator_rounded_rectangle_green</item>
+        <!--      <item name="tabMode">fixed</item>
+              <item name="tabSelectedTextColor">@color/colorTabTextCheck</item>
+              <item name="tabTextColor">@color/colorTabTextNormal</item>-->
+
+    </style>
+
+    <style name="TabIndicatorRoundRectRed">
+        <item name="tabIndicator">@drawable/tab_indicator_rounded_rectangle_red</item>
+
+
+    </style>
+
+
+    <style name="TabIndicatorRectGreen">
+        <item name="tabIndicator">@drawable/tab_indicator_rectangle_green</item>
+    </style>
+
+    <style name="TabIndicatoRectRed">
+        <item name="tabIndicator">@drawable/tab_indicator_rectangle_red</item>
+    </style>
+
+
 </resources>

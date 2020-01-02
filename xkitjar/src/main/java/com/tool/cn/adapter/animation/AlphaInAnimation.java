@@ -19,7 +19,6 @@ public class AlphaInAnimation implements BaseAnimation {
     public AlphaInAnimation(float from) {
         mFrom = from;
     }
-
     @Override
     public Animator[] getAnimators(View view) {
         return new Animator[]{ObjectAnimator.ofFloat(view, "alpha", mFrom, 1f)};

@@ -2,11 +2,13 @@ package com.tool.cn;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.util.DisplayMetrics;
 
-import com.tool.cn.title.util.StatusBarUtil;
 import com.tool.cn.util.BaseKit;
+import com.tool.cn.util.SBarUtil;
 import com.tool.cn.util.SPKit;
 import com.tool.cn.util.XLog;
 
@@ -28,43 +30,49 @@ import java.util.Date;
 
 public class XKit {
     public static DisplayMetrics getDisplayMetrics() {
-
-
         return Resources.getSystem().getDisplayMetrics();
     }
 
     /**
-     * 设置状态栏字体的颜色
-     * 默认状态栏字体的颜色为白色
-     *
-     * @param isWhite
+     * @param isWhite     字体的颜色
      * @param activity
+     * @param sBarBgColor 状态栏背景色颜色
      */
-    public static void setStatusBarTextColor(boolean isWhite, Activity activity) {
+    public static void setStatusBarTextColor(Activity activity,boolean isWhite,int sBarBgColor) {
 
         if (isWhite) {
-            StatusBarUtil.setStatusBarDarkMode(activity);
+            SBarUtil.setStatusBarDarkMode(activity, sBarBgColor, Color.TRANSPARENT, false, false);
         } else {
-            StatusBarUtil.setStatusBarLightMode(activity);
+            SBarUtil.setStatusBarLightMode(activity, sBarBgColor, Color.TRANSPARENT, false, false);
         }
     }
 
-    /**
-     * 设置全屏    用于闪屏页使用
-     *
-     * @param activity
-     */
-    public static void setFullScreen(Activity activity) {
-        StatusBarUtil.setFullScreenWithSplash(activity);
-    }
 
+    /**
+     * @param activity
+     * @param isWhiteFont 状态栏是否是白色字体
+     */
+    public static void setFullScreen(Activity activity, boolean isWhiteFont) {
+        if (isWhiteFont) {
+            SBarUtil.setStatusBarDarkMode(activity, Color.TRANSPARENT, Color.TRANSPARENT, true, true);
+        } else {
+            SBarUtil.setStatusBarLightMode(activity, Color.TRANSPARENT, Color.TRANSPARENT, true, true);
+        }
+    }
+    public static void setImmerse(Activity activity, boolean isWhiteFont,int navBarBgColor) {
+        if (isWhiteFont) {
+            SBarUtil.setStatusBarDarkMode(activity, Color.TRANSPARENT, navBarBgColor, true, false);
+        } else {
+            SBarUtil.setStatusBarLightMode(activity, Color.TRANSPARENT, navBarBgColor, true, false);
+        }
+    }
     /**
      * 获得状态栏高度
      *
      * @return
      */
     public static int getStatusHeight() {
-        return StatusBarUtil.getStatusBarHeight();
+        return SBarUtil.getStatusBarHeight();
 
     }
 
@@ -76,7 +84,17 @@ public class XKit {
         return (int) (dpValue * scale + 0.5f);
     }
 
+    public static int dp2px(Context context, double dpValue) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dpValue * scale + 0.5f);
+    }
+
     public static int px2dp(Context context, float pxValue) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (pxValue / scale + 0.5f);
+    }
+
+    public static int px2dp(Context context, double pxValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (pxValue / scale + 0.5f);
     }
@@ -84,6 +102,14 @@ public class XKit {
 
     public static int getScreenWidth() {
         return getDisplayMetrics().widthPixels;
+    }
+
+    public static int getScreenWidth(Context context) {
+        return context.getResources().getDisplayMetrics().widthPixels;
+    }
+
+    public static int getScreenHeight(Context context) {
+        return context.getResources().getDisplayMetrics().heightPixels;
     }
 
     public static int getScreenHeight() {
@@ -210,4 +236,82 @@ public class XKit {
     }
 
 
+    /**
+     * colorString="#ffffff"
+     *
+     * @param colorString ""
+     * @return
+     */
+
+    public static int getColor(String colorString) {
+        return Color.parseColor(colorString);
+    }
+
+    /**
+     * setTextColor(context.getResources().getColor(R.color.Check));
+     *
+     * @param mContext
+     * @param resourceId
+     * @return
+     */
+    public static int getColor(Context mContext, int resourceId) {
+        return mContext.getResources().getColor(resourceId);
+    }
+
+    /**
+     * Activity的跳转动画     scale和alpha特效
+     *
+     * @param mContext
+     * @param cls
+     */
+
+    public static void scale(Activity mContext, Class<?> cls) {
+        mContext.startActivity(new Intent(mContext, cls));
+        mContext.overridePendingTransition(R.anim.screen_zoom_in, R.anim.screen_zoom_out);
+    }
+
+    /**
+     * Activity的跳转动画    scale和alpha特效
+     *
+     * @param mContext
+     * @param mIntent
+     */
+
+    public static void scale(Activity mContext, Intent mIntent) {
+        mContext.startActivity(mIntent);
+        mContext.overridePendingTransition(R.anim.screen_zoom_in, R.anim.screen_zoom_out);
+    }
+
+
+    /**
+     * Activity的跳转动画    从下向上滑动 加Alpha 变动特效
+     *
+     * @param mContext
+     * @param cls
+     */
+
+    public static void slideToUp(Activity mContext, Class<?> cls) {
+        mContext.startActivity(new Intent(mContext, cls));
+        mContext.overridePendingTransition(R.anim.activity_up_in, R.anim.activity_up_out);
+    }
+
+    /**
+     * Activity的跳转动画    从下向上滑动 加Alpha 变动特效
+     *
+     * @param mContext
+     * @param mIntent
+     */
+
+    public static void slideToUp(Activity mContext, Intent mIntent) {
+        mContext.startActivity(mIntent);
+        mContext.overridePendingTransition(R.anim.activity_up_in, R.anim.activity_up_out);
+    }
+    /**
+     * Activity的跳转动画 页面销毁动画   在finish（）  回掉即可
+     *
+     * @param mContext
+     */
+    public static void slideToDowm(Activity mContext) {
+        mContext.overridePendingTransition(R.anim.activity_down_in, R.anim.activity_down_out);
+    }
 }

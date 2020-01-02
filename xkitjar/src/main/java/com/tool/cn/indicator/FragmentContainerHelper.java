@@ -24,7 +24,7 @@ import java.util.List;
 public class FragmentContainerHelper {
 
 
-    
+
     private List<MagicIndicator> mMagicIndicators = new ArrayList<MagicIndicator>();
     private ValueAnimator mScrollAnimator;
     private int mLastSelectedIndex;

@@ -9,9 +9,9 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 
+import com.tool.cn.XKit;
 import com.tool.cn.indicator.FragmentContainerHelper;
 import com.tool.cn.indicator.buildins.ArgbEvaluatorHolder;
-import com.tool.cn.indicator.buildins.UIUtil;
 import com.tool.cn.indicator.buildins.commonnavigator.abs.IPagerIndicator;
 import com.tool.cn.indicator.buildins.commonnavigator.model.PositionData;
 
@@ -50,9 +50,9 @@ public class BezierPagerIndicator extends View implements IPagerIndicator {
     private void init(Context context) {
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setStyle(Paint.Style.FILL);
-        mMaxCircleRadius = UIUtil.dip2px(context, 3.5);
-        mMinCircleRadius = UIUtil.dip2px(context, 2);
-        mYOffset = UIUtil.dip2px(context, 1.5);
+        mMaxCircleRadius = XKit.dp2px(context, 3.5);
+        mMinCircleRadius = XKit.dp2px(context, 2);
+        mYOffset =XKit.dp2px(context, 1.5);
     }
 
     @Override

@@ -10,8 +10,8 @@ import android.view.ViewConfiguration;
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 
+import com.tool.cn.XKit;
 import com.tool.cn.indicator.abs.IPagerNavigator;
-import com.tool.cn.indicator.buildins.UIUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,9 +51,9 @@ public class CircleNavigator extends View implements IPagerNavigator {
 
     private void init(Context context) {
         mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
-        mRadius = UIUtil.dip2px(context, 3);
-        mCircleSpacing = UIUtil.dip2px(context, 8);
-        mStrokeWidth = UIUtil.dip2px(context, 1);
+        mRadius = XKit.dp2px(context, 3);
+        mCircleSpacing = XKit.dp2px(context, 8);
+        mStrokeWidth = XKit.dp2px(context, 1);
     }
 
     @Override

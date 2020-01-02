@@ -26,9 +26,11 @@
     <color name="colorActionSheetEdgeLineGray">#DCDCDC</color>
     <color name="colorActionSheetNormalBackground">#e5e3e4</color>
 
-
-
     <color name="_xpopup_list_divider">#EEEEEE</color>
     <color name="_xpopup_title_color">#111111</color>
     <color name="_xpopup_content_color">#333333</color>
+    <color name="tab_green_indicator">#5CB85C</color>
+    <color name="tab_red_indicator">#ffce3d3a</color>
+
+
 </resources>

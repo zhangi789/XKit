@@ -8,9 +8,9 @@ import android.view.View;
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 
+import com.tool.cn.XKit;
 import com.tool.cn.indicator.FragmentContainerHelper;
 import com.tool.cn.indicator.buildins.ArgbEvaluatorHolder;
-import com.tool.cn.indicator.buildins.UIUtil;
 import com.tool.cn.indicator.buildins.commonnavigator.abs.IPagerIndicator;
 import com.tool.cn.indicator.buildins.commonnavigator.model.PositionData;
 
@@ -53,8 +53,8 @@ public class LinePagerIndicator extends View implements IPagerIndicator {
     private void init(Context context) {
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setStyle(Paint.Style.FILL);
-        mLineHeight = UIUtil.dip2px(context, 3);
-        mLineWidth = UIUtil.dip2px(context, 10);
+        mLineHeight = XKit.dp2px(context, 3);
+        mLineWidth = XKit.dp2px(context, 10);
     }
 
     @Override

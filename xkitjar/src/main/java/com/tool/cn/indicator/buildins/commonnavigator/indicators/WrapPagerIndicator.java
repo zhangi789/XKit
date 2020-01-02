@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 
+import com.tool.cn.XKit;
 import com.tool.cn.indicator.FragmentContainerHelper;
-import com.tool.cn.indicator.buildins.UIUtil;
 import com.tool.cn.indicator.buildins.commonnavigator.abs.IPagerIndicator;
 import com.tool.cn.indicator.buildins.commonnavigator.model.PositionData;
 
@@ -43,8 +43,8 @@ public class WrapPagerIndicator extends View implements IPagerIndicator {
     private void init(Context context) {
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setStyle(Paint.Style.FILL);
-        mVerticalPadding = UIUtil.dip2px(context, 6);
-        mHorizontalPadding = UIUtil.dip2px(context, 10);
+        mVerticalPadding = XKit.dp2px(context, 6);
+        mHorizontalPadding = XKit.dp2px(context, 10);
     }
 
     @Override
