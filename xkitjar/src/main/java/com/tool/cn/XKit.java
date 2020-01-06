@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.util.DisplayMetrics;
+import android.view.Gravity;
+import android.widget.Toast;
 
 import com.tool.cn.util.BaseKit;
 import com.tool.cn.util.SBarUtil;
@@ -313,5 +315,28 @@ public class XKit {
      */
     public static void slideToDowm(Activity mContext) {
         mContext.overridePendingTransition(R.anim.activity_down_in, R.anim.activity_down_out);
+    }
+
+
+    /**
+     *
+     * @param context
+     * @param content
+     */
+    public static void showLongToast(Context context, String content) {
+        Toast toast = Toast.makeText(context, content, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
+    }
+
+    /**
+     * 居中显示的Toast
+     *
+     * @param content
+     */
+    public static void showShortToast(Context context, String content) {
+        Toast toast = Toast.makeText(context, content, Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
     }
 }
