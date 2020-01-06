@@ -322,6 +322,7 @@ public class XKit {
      *
      * @param context
      * @param content
+     * 
      */
     public static void showLongToast(Context context, String content) {
         Toast toast = Toast.makeText(context, content, Toast.LENGTH_LONG);
